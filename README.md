@@ -11,7 +11,7 @@ Let's start by building a simple "Hello, world!" app.
 3. Restore the packages
 
   `dotnet restore`
-   
+
 4. Update the code in Startup.cs to return a message of your choice
 
   ```c#
@@ -30,7 +30,7 @@ Let's start by building a simple "Hello, world!" app.
 5. Run the app (the dotnet run command will build the app when it's out of date)
 
   `dotnet run`
-  
+
 6. Browse to http://localhost:5000
 
   ![Hello world output](https://www-asp.azureedge.net/v-2016-07-25-003/images/ui/get-started-1.png)
@@ -47,7 +47,7 @@ Now let's enable support for static files.
       public void Configure(IApplicationBuilder app)
       {
           app.UseStaticFiles();
-          
+
           app.Run(context =>
           {
               return context.Response.WriteAsync("Hello from ASP.NET Core!");
@@ -55,7 +55,7 @@ Now let's enable support for static files.
       }
   }
   ```
-  
+
 2. Add a wwwroot folder with an index.html file
 
   ```html
@@ -74,9 +74,7 @@ Now let's enable support for static files.
 4. Browse to http://localhost:5000/index.html
 
   ![Static file output](https://www-asp.azureedge.net/v-2016-07-25-003/images/ui/get-started-2.png)
-  
-That's it! 
 
-Next up, try building your first ASP.NET Core MVC app with [Visual Studio](https://docs.asp.net/en/latest/tutorials/first-mvc-app/start-mvc.html) or [Visual Studio Code](https://docs.asp.net/en/latest/tutorials/your-first-mac-aspnet.html).
+5. Build the Docker image
 
-Also checkout out the [docs](https://docs.asp.net) and [tutorials](https://docs.asp.net/en/latest/tutorials/index.html).
+  `./build.sh`
